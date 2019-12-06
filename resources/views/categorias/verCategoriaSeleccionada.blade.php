@@ -10,14 +10,14 @@
             <div class="col-lg-6">
                 <h1 style="font-family: helvetica">{{$categoria->nombre}}</h1>
             </div>
-            @if(auth()->user()->privilegio == 1)
+
                 <div class="col-lg-3">
                     <a style="color:white !important;" class="btn btn-success btn-md" href="{{ route('categoria.reporte', $categoria->id) }}">
                         <span class="fa fa-download"></span>
                         Generar reporte
                     </a>
                 </div>
-            @endif
+
         </div>
         <div class="container">
             @if(isset($categoria->academico))
@@ -118,7 +118,14 @@
     </div>
 
     <br><br><br>
-
+    <center>
+    <div class="col-lg-3">
+        <a style="color:white !important;" class="btn btn-success btn-md" href="{{ route('categoria.reporte', $categoria->id) }}">
+            <span class="fa fa-download"></span>
+            Generar reporte
+        </a>
+    </div>
+  </center>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="recomendaciones-tab" data-toggle="tab" href="#recomendaciones" role="tab" aria-controls="recomendaciones" aria-selected="true">Recomendaciones</a>
